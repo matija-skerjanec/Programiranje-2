@@ -60,19 +60,23 @@ public class kviz2 {
     }
 
 
-    public static void rotiraj(int [] tabela, int k){
+    public static void rotiraj(int[] tabela, int k) {
         int n = tabela.length;
-        int noviIndeks = 0;
+        if (n == 0) return;
+
+        k = k % n;
         int[] nova = new int[n];
 
-        for(int i = 0; i<tabela.length;i++) {
-            noviIndeks = (i + k) % n;
+        for (int i = 0; i < n; i++) {
+            int noviIndeks = (i - k + n) % n;
             nova[noviIndeks] = tabela[i];
         }
 
+        for (int i = 0; i < n; i++) {
+            tabela[i] = nova[i];
+        }
+    }
 
-
-        System.out.println(Arrays.toString(nova));
 
     }
 

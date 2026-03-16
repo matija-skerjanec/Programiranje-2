@@ -1,6 +1,6 @@
-package VAJE;
 
-public class vaje1 {
+
+public class Vaje1 {
     public static void main(String[] args) {
         romb(2, 5);
     }

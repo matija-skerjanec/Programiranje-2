@@ -1,6 +1,6 @@
-package KVIZ;
 
-public class kviz1 {
+
+public class Kviz1 {
     public static void main(String[] args) {
         //kalkulator(42,13);
         //nicli(1,2,1);
@@ -57,11 +57,11 @@ public class kviz1 {
         if (sekunde<0){
             return("Število sekund ne more biti negativno");
         }else{
-        int ure = (sekunde/3600);
-        sekunde = sekunde - ure*3600;
-        int minute = (sekunde/60);
-        sekunde = sekunde - minute*60;
-        return String.format("%02d"+":"+"%02d"+":"+"%02d",ure,minute,sekunde);
+            int ure = (sekunde/3600);
+            sekunde = sekunde - ure*3600;
+            int minute = (sekunde/60);
+            sekunde = sekunde - minute*60;
+            return String.format("%02d"+":"+"%02d"+":"+"%02d",ure,minute,sekunde);
         }
     }
 
@@ -125,7 +125,7 @@ public class kviz1 {
 
         }
 
-        
+
 
     }
 

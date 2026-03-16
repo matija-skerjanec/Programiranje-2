@@ -1,14 +1,14 @@
-package KVIZ;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class kviz2 {
+public class Kviz2 {
     public static void main(String[] args) {
         //System.out.println(vsotaStevk("Matija5151"));
         //System.out.println(preveriRep("Danes je lep dan" , "dan"));
-        int[]tabela = {1,2,3,4,5,6};
-        rotiraj(tabela,1);
+        //int[]tabela = {1,2,3,4,5,6};
+        //rotiraj(tabela,1);
     }
     static int vsotaStevk(String str){
         int vsota = 0;
@@ -77,15 +77,23 @@ public class kviz2 {
         }
     }
 
-
-    }
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,5 +1,3 @@
-package DN;
-
 public class DN01{
     public static void main(String[] args){
         System.out.println(" ____             _                 _  _              ");
@@ -15,4 +13,3 @@ public class DN01{
 
     }
 }
-

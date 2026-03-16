@@ -1,6 +1,5 @@
-package VAJE;
 
-public class vaje2 {
+public class Vaje2 {
     public static void main(String[] args) {
         System.out.println(" n              n!            Stirling(n)      napaka (%)");
         System.out.println("----------------------------------------------------------\n");

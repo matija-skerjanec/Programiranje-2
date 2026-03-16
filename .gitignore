@@ -1,0 +1,56 @@
+=========================
+IntelliJ IDEA
+=========================
+
+.idea/
+*.iml
+*.ipr
+*.iws
+
+IntelliJ build output
+
+out/
+
+=========================
+Java build files
+=========================
+
+*.class
+*.jar
+*.war
+*.ear
+
+Maven
+
+target/
+
+Gradle
+
+.gradle/
+build/
+
+=========================
+Logs
+=========================
+
+*.log
+
+=========================
+OS generated files
+=========================
+Mac
+
+.DS_Store
+
+Windows
+
+Thumbs.db
+desktop.ini
+
+=========================
+Temporary files
+=========================
+
+*.tmp
+*.temp
+*.swp

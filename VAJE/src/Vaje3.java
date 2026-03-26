@@ -1,81 +1,18 @@
 public class Vaje3 {
     public static void main(String[] args) {
-        izpisi16bit((short)0b1111100111111001);
-        izpisi16bit((short) 0b1111100111111000);
-        izpisi16bit((short) 0b1110001001001111);
-        izpisi16bit2(new short[] {(short)0b1111100011101000, (short)0b1111100111111010, (short)0b1111010001001111});
-        System.out.println();
-        izpisi16bit3("Programiranje");
-
-
+        izpis('A');
     }
-    public static void  izpisi16bit(short kodaZnaka){
-        for (int i = 15; i >= 0 ; i--) {
-            int maska = 1<<i;
-            if((kodaZnaka & maska)!=0){
-                System.out.print(Znaki.crnaPika);
+    public static void izpis(char crka) {
+        Short znak = 0;
+        for (int  i = 0;  i <(Znaki.abeceda).length;  i++) {
+            if (Znaki.abeceda[i] == crka){
+                znak = Znaki.kodeZnakov16bit[i];
+                break;
             }
+            for (int j = 0; j < znak ; j++) {
 
-            else{
-                System.out.print(Znaki.belaPika);
-            }
-            if(i%4==0){
-                System.out.println();
             }
         }
-        System.out.println();
-    }
-
-
-    public static void izpisi16bit2(short[] nizZnakov) {
-
-        for (int vrstica = 0; vrstica < 4; vrstica++) {
-
-            for (int i = 0; i < nizZnakov.length; i++) {
-
-                for (int stolpec = 0; stolpec < 4; stolpec++) {
-
-                    int bit = 15 - (vrstica * 4 + stolpec);
-                    int maska = 1 << bit;
-
-                    if ((nizZnakov[i] & maska) != 0) {
-                        System.out.print(Znaki.crnaPika);
-                    } else {
-                        System.out.print(Znaki.belaPika);
-                    }
-                }
-
-
-                System.out.print(Znaki.belaPika);
-            }
-
-            System.out.println();
-        }
-    }
-
-    public static void izpisi16bit3(String niz){
-        niz = niz.toUpperCase();
-        short[] kode = new short[niz.length()];
-
-        for (int i = 0; i < niz.length(); i++) {
-            char crka = niz.charAt(i);
-            int index = -1;
-
-            for (int j = 0; j < Znaki.abeceda.length; j++) {
-                if (crka == Znaki.abeceda[j]) {
-                    index = j;
-                    break;
-                }
-            }
-
-            if (index != -1) {
-                kode[i] = Znaki.kodeZnakov16bit[index];
-            } else {
-                kode[i] = Znaki.kodeZnakov16bit[Znaki.abeceda.length - 1];
-            }
-        }
-
-        izpisi16bit2(kode);
     }
 
     static class Znaki{
@@ -103,7 +40,7 @@ public class Vaje3 {
                  (short) 0b1111101110011001, // M
                  (short) 0b1101101110011001, // N
                  (short) 0b1111100110011111, // O
-                 (short) 0b1111100111111000,                // TODO: dodajte znak P
+                 (short) 0b0,                // TODO: dodajte znak P
                  (short) 0b1111100110111111, // Q
                  (short) 0b1111100111111010, // R
                  (short) 0b1111100011110111, // S
@@ -116,7 +53,7 @@ public class Vaje3 {
                  (short) 0b1111001001001111, // Z
                  (short) 0b0110100110010110, // 0
                  (short) 0b0110001000101111, // 1
-                 (short) 0b1110001001001111,              // TODO: dodajte znak 2
+                 (short) 0b0,                // TODO: dodajte znak 2
                  (short) 0b1111011100011111, // 3
                  (short) 0b1000100111110001, // 4
                  (short) 0b1111100011110111, // 5
@@ -124,7 +61,7 @@ public class Vaje3 {
                  (short) 0b1111000100010001, // 7
                  (short) 0b1110101111010111, // 8
                  (short) 0b1111100111110001, // 9
-                  0                          // presledek
+                                            // presledek
          };
     }
 }
